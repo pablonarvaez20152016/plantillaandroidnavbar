@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="co.edu.udenar.treeapis.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_vista1"
+        android:name="co.edu.udenar.treeapis.ui.view1.View1Fragment"
+        android:label="@string/vista1"
+        tools:layout="@layout/fragment_view1" />
+
+    <fragment
+        android:id="@+id/nav_vista2"
+        android:name="co.edu.udenar.treeapis.ui.view3.View3Fragment"
+        android:label="@string/vista3"
+        tools:layout="@layout/fragment_view3" />
+
+    <fragment
+        android:id="@+id/nav_vista3"
+        android:name="co.edu.udenar.treeapis.ui.view2.View2Fragment"
+        android:label="@string/vista2"
+        tools:layout="@layout/fragment_view2" />
+</navigation>

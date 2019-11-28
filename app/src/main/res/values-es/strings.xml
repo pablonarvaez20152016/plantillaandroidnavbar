@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">treeapis</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="vista1">vista1</string>
+    <string name="vista2">vista2</string>
+    <string name="vista3">vista3</string>
+</resources>
