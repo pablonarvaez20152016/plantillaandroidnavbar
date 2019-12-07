@@ -10,8 +10,8 @@
         android:id="@+id/gifImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/load"
-        />
+        android:background="#FFFFFF"
+        android:src="@drawable/relojarena" />
 
 
 
