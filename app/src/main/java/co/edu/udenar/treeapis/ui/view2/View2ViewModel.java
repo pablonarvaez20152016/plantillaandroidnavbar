@@ -10,7 +10,7 @@ public class View2ViewModel extends ViewModel {
 
     public View2ViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is view2 fragment");
+        mText.setValue("Esta es la  view2 fragment");
     }
 
     public LiveData<String> getText() {

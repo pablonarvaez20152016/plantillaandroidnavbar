@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">treeapis</string>
+    <string name="app_name">Treeapis</string>
     <string name="action_settings">Configuraciones</string>
-    <string name="vista1">vista1</string>
     <string name="vista2">vista2</string>
     <string name="vista3">vista3</string>
+    <string name="nav_header_title">Udenar</string>
+    <string name="nav_header_subtitle">Seminario de Programación</string>
+    <string name="menu_tools">Herramientas</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_gallery">Galeria</string>
+    <string name="menu_send">Enviar</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_slideshow">Deshacer</string>
+    <string name="nav_header_desc">Encabezado de Navegación</string>
+    <string name="navigation_drawer_close">##</string>
+    <string name="navigation_drawer_open">##</string>
+    <string name="SitiosWifi">Sitios Wifi Pasto</string>
+    <string name="SitiosCulturales">Sitios Culturales</string>
+    <string name="Mapa">Mapa</string>
 </resources>

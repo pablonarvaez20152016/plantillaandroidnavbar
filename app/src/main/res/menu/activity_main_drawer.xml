@@ -6,20 +6,24 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
         <item
+            android:id="@+id/nav_vista0"
+            android:icon="@drawable/ic_wifi_black_48dp"
+            android:title="@string/SitiosWifi" />
+        <item
             android:id="@+id/nav_vista1"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/vista1" />
+            android:icon="@drawable/ic_whatshot_black_24dp"
+            android:title="@string/SitiosCulturales" />
         <item
             android:id="@+id/nav_vista2"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/vista2" />
         <item
             android:id="@+id/nav_vista3"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/vista3" />
+            android:icon="@drawable/ic_location_on_black_24dp"
+            android:title="@string/Mapa" />
     </group>
 
 

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">treeapis</string>
+    <string name="app_name">Treeapis</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Universidad de Nariño</string>
+    <string name="nav_header_subtitle">Seminario de Programación</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -13,7 +13,9 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-    <string name="vista1">view1</string>
     <string name="vista2">view2</string>
     <string name="vista3">view3</string>
+    <string name="SitiosWifi">Sitios Wifi Pasto</string>
+    <string name="SitiosCulturales">Sitios Culturales</string>
+    <string name="Mapa">Mapa</string>
 </resources>
