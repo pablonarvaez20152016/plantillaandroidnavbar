@@ -12,7 +12,7 @@
         android:id="@+id/carview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EB449EFF"
+        android:background="@drawable/degradado"
         android:orientation="vertical"
         android:padding="8dp">
 
@@ -20,7 +20,7 @@
             android:id="@+id/tvwifi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#4A5ED6"
+            android:background="#673ab7"
             android:fontFamily="sans-serif-medium"
             android:foregroundTint="#111113"
             android:text="Nombre"

@@ -60,9 +60,9 @@ public class View0Fragment extends Fragment {
     }
     private void obtenerDatos() {
         WifiapiService service = retrofit.create(WifiapiService.class);
-        Call<ArrayList<Wifi>> WifiRespuestaCall = service.obtenerListaWifi();
+        Call<ArrayList<Wifi>> WifiRequestCall = service.obtenerListaWifi();
 
-        WifiRespuestaCall.enqueue(new Callback<ArrayList<Wifi>>() {
+        WifiRequestCall.enqueue(new Callback<ArrayList<Wifi>>() {
             @Override
             public void onResponse(Call<ArrayList<Wifi>> call, Response<ArrayList<Wifi>> response) {
                 if(response.isSuccessful()){

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Home.HomeFragment"
-    android:background="@drawable/calavera">
+    android:background="@drawable/bigcasataminango">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,7 +32,8 @@
                 android:text="Sitios wifi Pasto"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                android:typeface="normal" />
+                android:typeface="normal"
+                android:drawableLeft="@drawable/ic_wifi_black_48dp" />
 
             <Button
                 android:id="@+id/btnculturales"

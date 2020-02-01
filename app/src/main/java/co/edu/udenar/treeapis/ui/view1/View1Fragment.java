@@ -9,13 +9,18 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 import co.edu.udenar.treeapis.R;
+import co.edu.udenar.treeapis.adapters.SiteCulturalAdapter;
+import co.edu.udenar.treeapis.adapters.Wifiadapter;
 import co.edu.udenar.treeapis.apiservices.SiteculturalApiService;
 import co.edu.udenar.treeapis.apiservices.WifiapiService;
 import co.edu.udenar.treeapis.models.Wifi;
@@ -32,19 +37,25 @@ public class View1Fragment extends Fragment {
 
     private View1ViewModel view1ViewModel;
     private Retrofit retrofitsites;
+    private RecyclerView mRecyclerViewsite;
+    public SiteCulturalAdapter mAdaptersite;
+    private CardView cardViewsite;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         view1ViewModel =
                 ViewModelProviders.of(this).get(View1ViewModel.class);
         View root = inflater.inflate(R.layout.fragment_view1, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        view1ViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+
+        mRecyclerViewsite = (RecyclerView) root.findViewById(R.id.recycler_view_site);
+        mRecyclerViewsite.setHasFixedSize(true);
+
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2);
+        mRecyclerViewsite.setLayoutManager(layoutManager);
+
+        mAdaptersite = new SiteCulturalAdapter(getContext());
+        mRecyclerViewsite.setAdapter(mAdaptersite);
 
 
 
@@ -65,7 +76,7 @@ public class View1Fragment extends Fragment {
             public void onResponse(Call<ArrayList<Sitiocultural>> call, Response<ArrayList<Sitiocultural>> response) {
                 if(response.isSuccessful()){
                     ArrayList listasites = response.body();
-                    //mAdapter.setmDataSet(listawifi);
+                    mAdaptersite.setmDataSet(listasites);
 
 
                     for(int i=0;i<listasites.size();i++)
