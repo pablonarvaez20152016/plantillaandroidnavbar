@@ -1,4 +1,4 @@
-package co.edu.udenar.treeapis.ui.Home;
+package co.edu.udenar.treeapis.ui;
 
 import android.os.Bundle;
 
@@ -18,7 +18,7 @@ import static androidx.navigation.Navigation.findNavController;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel mViewModel;
+//    private HomeViewModel mViewModel;
     private Button btnwifi,btnculturales,btnmapa;
 
 

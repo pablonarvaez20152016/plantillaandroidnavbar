@@ -1,4 +1,4 @@
-package co.edu.udenar.treeapis.ui.View0;
+package co.edu.udenar.treeapis.ui;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +20,7 @@ import co.edu.udenar.treeapis.adapters.Wifiadapter;
 import co.edu.udenar.treeapis.models.CoordenadasPuntosWifi;
 import co.edu.udenar.treeapis.models.Wifi;
 import co.edu.udenar.treeapis.apiservices.WifiapiService;
+import co.edu.udenar.treeapis.ui.modelfragmensts.View0ViewModel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

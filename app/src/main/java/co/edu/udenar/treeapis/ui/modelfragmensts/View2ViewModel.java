@@ -1,16 +1,16 @@
-package co.edu.udenar.treeapis.ui.view1;
+package co.edu.udenar.treeapis.ui.modelfragmensts;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class View1ViewModel extends ViewModel {
+public class View2ViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public View1ViewModel() {
+    public View2ViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is view1 fragment");
+        mText.setValue("Esta es la  view2 fragment");
     }
 
     public LiveData<String> getText() {

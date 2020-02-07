@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">Treeapis</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Universidad de Nariño</string>
+    <string name="nav_header_title">Nariño University</string>
     <string name="nav_header_subtitle">Seminario de Programación</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
@@ -15,7 +13,16 @@
     <string name="menu_send">Send</string>
     <string name="vista2">view2</string>
     <string name="vista3">view3</string>
-    <string name="SitiosWifi">Sitios Wifi Pasto</string>
-    <string name="SitiosCulturales">Sitios Culturales</string>
-    <string name="Mapa">Mapa</string>
+    <string name="SitiosWifi">Wifi Pasto Sites</string>
+    <string name="SitiosCulturales">cultural sites</string>
+    <string name="Mapa">Map</string>
+    <string name="acercade">About</string>
+    <string name="Salir">Exit</string>
+    <string name="Datos">Dates Site</string>
+    <string name="Direccion">address</string>
+    <string name="Representante">Representative</string>
+    <string name="Telefono">Telephone</string>
+    <string name="Correo">Email</string>
+
+
 </resources>

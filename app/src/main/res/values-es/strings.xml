@@ -4,7 +4,7 @@
     <string name="action_settings">Configuraciones</string>
     <string name="vista2">vista2</string>
     <string name="vista3">vista3</string>
-    <string name="nav_header_title">Udenar</string>
+    <string name="nav_header_title">Universidad de Nariño</string>
     <string name="nav_header_subtitle">Seminario de Programación</string>
     <string name="menu_tools">Herramientas</string>
     <string name="menu_home">Inicio</string>
@@ -13,9 +13,14 @@
     <string name="menu_share">Compartir</string>
     <string name="menu_slideshow">Deshacer</string>
     <string name="nav_header_desc">Encabezado de Navegación</string>
-    <string name="navigation_drawer_close">##</string>
-    <string name="navigation_drawer_open">##</string>
     <string name="SitiosWifi">Sitios Wifi Pasto</string>
     <string name="SitiosCulturales">Sitios Culturales</string>
     <string name="Mapa">Mapa</string>
+    <string name="acercade">Acerca de</string>
+    <string name="Salir">Salir</string>
+    <string name="Datos">Información</string>
+    <string name="Direccion">Dirección</string>
+    <string name="Telefono">Telefono</string>
+    <string name="Representante">Representante</string>
+    <string name="Correo">Correo</string>
 </resources>

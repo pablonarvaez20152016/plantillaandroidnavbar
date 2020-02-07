@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="co.edu.udenar.treeapis.ui.Home.HomeFragment"
+        android:name="co.edu.udenar.treeapis.ui.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_view0" >
         <action
@@ -22,28 +22,34 @@
         <action
             android:id="@+id/action_nav_home_to_nav_vista3"
             app:destination="@id/nav_vista3" />
+
     </fragment>
     <fragment
         android:id="@+id/nav_vista0"
-        android:name="co.edu.udenar.treeapis.ui.View0.View0Fragment"
+        android:name="co.edu.udenar.treeapis.ui.View0Fragment"
         android:label="SitiosWifi"
         tools:layout="@layout/fragment_view0" />
 
     <fragment
         android:id="@+id/nav_vista1"
-        android:name="co.edu.udenar.treeapis.ui.view1.View1Fragment"
+        android:name="co.edu.udenar.treeapis.ui.View1Fragment"
         android:label="@string/SitiosCulturales"
         tools:layout="@layout/fragment_view1" />
 
     <fragment
         android:id="@+id/nav_vista2"
-        android:name="co.edu.udenar.treeapis.ui.view2.View2Fragment"
+        android:name="co.edu.udenar.treeapis.ui.View2Fragment"
         android:label="@string/vista2"
         tools:layout="@layout/fragment_view2" />
 
     <fragment
         android:id="@+id/nav_vista3"
-        android:name="co.edu.udenar.treeapis.ui.view3.View3Fragment"
+        android:name="co.edu.udenar.treeapis.ui.View3Fragment"
         android:label="@string/Mapa"
         tools:layout="@layout/fragment_view3" />
+    <fragment
+        android:id="@+id/acercaFragment"
+        android:name="co.edu.udenar.treeapis.AcercaFragment"
+        android:label="fragment_acerca"
+        tools:layout="@layout/fragment_acerca" />
 </navigation>

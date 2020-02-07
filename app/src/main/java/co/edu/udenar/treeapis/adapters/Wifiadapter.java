@@ -1,6 +1,5 @@
 package co.edu.udenar.treeapis.adapters;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,9 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -20,7 +16,6 @@ import java.util.ArrayList;
 
 import co.edu.udenar.treeapis.R;
 import co.edu.udenar.treeapis.models.Wifi;
-import co.edu.udenar.treeapis.ui.view2.View2ViewModel;
 
 
 public class Wifiadapter extends RecyclerView.Adapter<Wifiadapter.ViewHolder> {

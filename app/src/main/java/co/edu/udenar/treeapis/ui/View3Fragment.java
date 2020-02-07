@@ -1,15 +1,12 @@
-package co.edu.udenar.treeapis.ui.view3;
+package co.edu.udenar.treeapis.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import org.osmdroid.util.GeoPoint;
@@ -17,6 +14,7 @@ import org.osmdroid.views.MapController;
 import org.osmdroid.views.MapView;
 
 import co.edu.udenar.treeapis.R;
+import co.edu.udenar.treeapis.ui.modelfragmensts.View3ViewModel;
 
 public class View3Fragment extends Fragment {
 

@@ -1,63 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="30dp"
-    card_view:cardCornerRadius="8dp"
+    android:layout_height="wrap_content"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="6dp"
-    android:layout_marginTop="30dp"
-    android:layout_marginLeft="30dp">
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:cardCornerRadius="3dp"
+    android:layout_margin="6dp">
 
    <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:id="@+id/carviewsite"
+       android:layout_width="399dp"
+       android:layout_height="wrap_content"
+       android:background="@drawable/degradado"
        android:orientation="vertical"
-       android:background="@drawable/fondocarviewsite">
-      <LinearLayout
-          android:orientation="horizontal"
+       android:padding="8dp">
+
+      <androidx.appcompat.widget.AppCompatCheckedTextView
+          android:id="@+id/sitio"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
-          android:layout_marginLeft="30dp"
-          android:layout_marginRight="30dp"
-         >
+          android:layout_height="match_parent"
+          android:background="#673ab7"
+          android:fontFamily="sans-serif-medium"
+          android:foregroundTint="#111113"
+          android:text="Nombre"
+          android:textAlignment="center"
+          android:textSize="18sp" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+         <androidx.appcompat.widget.AppCompatImageView
+             android:id="@+id/imagensite"
+             android:layout_width="120dp"
+             android:layout_height="120dp"
+             android:layout_gravity="center"
+             android:layout_weight="1" />
+
+
          <LinearLayout
-             android:orientation="vertical"
              android:layout_width="wrap_content"
-             android:layout_height="wrap_content">
+             android:layout_height="160dp"
+             android:layout_weight="2"
+             android:orientation="vertical">
 
             <TextView
-
-                android:id="@+id/sitio"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sitio Cultural"
-                android:textColor="#ffffff"
-                android:textSize="24dp" />
+                android:fontFamily="sans-serif-black"
+                android:text="@string/Datos"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12sp" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/texto1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Direccion sitio:"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
                 android:id="@+id/dirsitio"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dirección"
-                android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:fontFamily="monospace"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/Representante"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/representante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/Telefono"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/Correo"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textSize="10sp" />
+
 
          </LinearLayout>
-         <RelativeLayout
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/imagensite"
-                android:layout_width="174dp"
-                android:layout_height="44dp"
-                android:background="@drawable/colaccasataminango"
-                android:layout_alignParentRight="true"/>
-         </RelativeLayout>
-
-
       </LinearLayout>
+
+      <Button
+          android:id="@+id/mapasite"
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:layout_marginLeft="150dp"
+          android:background="#510288D1"
+          android:fontFamily="sans-serif-black"
+          android:text="@string/Mapa"
+          android:textColor="#000000" />
+
 
    </LinearLayout>
 

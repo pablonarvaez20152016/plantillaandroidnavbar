@@ -1,16 +1,12 @@
 package co.edu.udenar.treeapis;
 
-import android.content.Context;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
-import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,8 +21,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
 
+import static androidx.navigation.Navigation.findNavController;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "Verificación==:";
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -39,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Log.e("qui" ,"ver" );
+
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -68,7 +67,24 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
     }
+//        @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch (item.getItemId()){
+//            case R.id.acercaFragment:
+//                View aView2 = getLayoutInflater().inflate(R.layout.fragment_acerca, null);
+//
+//                Log.e("opcion", "acerca de: " );
+//               return true;
+//            case R.id.salir:
+//                Log.e("opcion", "salir: " );
+//                finish();
+//        }
+//
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 
 
 }
