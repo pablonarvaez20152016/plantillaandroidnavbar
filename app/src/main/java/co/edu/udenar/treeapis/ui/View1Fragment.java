@@ -5,11 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +29,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static androidx.navigation.Navigation.findNavController;
+
 public class View1Fragment extends Fragment {
 
     private View1ViewModel view1ViewModel;
@@ -34,10 +39,11 @@ public class View1Fragment extends Fragment {
     private RecyclerView mRecyclerViewsite;
     SiteCulturalAdapter mAdaptersite;
     private CardView cardViewsite;
+    Button mapsite;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        Log.e("creo la vista", "o" );
+                             ViewGroup container, final Bundle savedInstanceState) {
+
         view1ViewModel =
                 ViewModelProviders.of(this).get(View1ViewModel.class);
         View root = inflater.inflate(R.layout.fragment_view1, container, false);
@@ -54,13 +60,36 @@ public class View1Fragment extends Fragment {
 
 
 
+
+
+
+
+
+
+
+
         retrofitsites=new Retrofit.Builder()
                 .baseUrl("https://www.datos.gov.co/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         obtenerDatosSiteCultural();
+
+
+
+//        mapsite=root.findViewById(R.id.mapasite);
+//        mapsite.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Bundle bundle = new Bundle();
+//                bundle.putInt("lat", 000);
+//                Navigation.findNavController(v).navigate(R.id.action_nav_vista1_to_nav_vista3,bundle);
+//
+//            }
+//        });
         return root;
     }
+
+
 
     private void obtenerDatosSiteCultural() {
        SiteculturalApiService service = retrofitsites.create(SiteculturalApiService.class);

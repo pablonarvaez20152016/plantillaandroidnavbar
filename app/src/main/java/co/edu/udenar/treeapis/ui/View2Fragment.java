@@ -5,22 +5,23 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView;
 
 import java.util.ArrayList;
 
 import co.edu.udenar.treeapis.R;
-import co.edu.udenar.treeapis.adapters.FotoAdapter;
-import co.edu.udenar.treeapis.apiservices.FotoApiService;
-import co.edu.udenar.treeapis.models.unsplash.Foto;
+
+import co.edu.udenar.treeapis.adapters.CanchaAdapter;
+import co.edu.udenar.treeapis.apiservices.CanchaApiService;
+import co.edu.udenar.treeapis.models.Escenarios_depor.Cancha;
 import co.edu.udenar.treeapis.ui.modelfragmensts.View2ViewModel;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,9 +33,10 @@ public class View2Fragment extends Fragment {
 
     private View2ViewModel view2ViewModel;
     private Retrofit retrofitfoto;
-    private static String TAG="fotos => ";
-    private RecyclerView mRecyclerViewfoto;
-    FotoAdapter mAdapterfoto;
+    private static String TAG="Escenarios depor => ";
+    private MultiSnapRecyclerView mRecyclerViewfoto,mRecyclerViewcancha2;
+    CanchaAdapter mAdaptercancha;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,43 +44,50 @@ public class View2Fragment extends Fragment {
         view2ViewModel =
                 ViewModelProviders.of(this).get(View2ViewModel.class);
         View root = inflater.inflate(R.layout.fragment_view2, container, false);
-        mRecyclerViewfoto = (RecyclerView) root.findViewById(R.id.recycler_view_foto);
+        mRecyclerViewfoto =  root.findViewById(R.id.recycler_view_cancha);
         mRecyclerViewfoto.setHasFixedSize(true);
-        Log.e("creo la vista", "o" );
 
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(),1);
+        mRecyclerViewcancha2 =  root.findViewById(R.id.recycler_cancha2);
+        mRecyclerViewcancha2.setHasFixedSize(true);
+
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(RecyclerView.HORIZONTAL);
         mRecyclerViewfoto.setLayoutManager(layoutManager);
 
-        mAdapterfoto = new FotoAdapter(getContext());
-        mRecyclerViewfoto.setAdapter(mAdapterfoto);
+
+        mAdaptercancha = new CanchaAdapter(getContext());
+        mRecyclerViewfoto.setAdapter(mAdaptercancha);
+
 
 
         retrofitfoto=new Retrofit.Builder()
-                .baseUrl("https://api.unsplash.com/")
+                .baseUrl("https://www.datos.gov.co/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        obtenerDatosFotos();
+        obtenerDatoscancha();
+        obtenerDatoscancha2();
         return root;
     }
 
-    private void obtenerDatosFotos() {
+    private void obtenerDatoscancha() {
 
-        FotoApiService service = retrofitfoto.create(FotoApiService.class);
-        Call<ArrayList<Foto>> FotosRespuestaCall = service.obtenerListafotos();
+        CanchaApiService service = retrofitfoto.create(CanchaApiService.class);
+        Call<ArrayList<Cancha>> FotosRespuestaCall = service.obtenerListacancha();
 
-        FotosRespuestaCall.enqueue(new Callback<ArrayList<Foto>>() {
+        FotosRespuestaCall.enqueue(new Callback<ArrayList<Cancha>>() {
             @Override
-            public void onResponse(Call<ArrayList<Foto>> call, Response<ArrayList<Foto>> response) {
+            public void onResponse(Call<ArrayList<Cancha>> call, Response<ArrayList<Cancha>> response) {
                 if (response.isSuccessful()) {
-                    ArrayList listafotos = response.body();
-                    mAdapterfoto.setmDataSet(listafotos);
+                    ArrayList listacancha = response.body();
+                    mAdaptercancha.setmDataSetcancha(listacancha);
 
 
-                    for (int i = 0; i < listafotos.size(); i++) {
-                        Foto p = (Foto) listafotos.get(i);
+                    for (int i = 0; i < listacancha.size(); i++) {
+                        Cancha p = (Cancha) listacancha.get(i);
 
 
-                        Log.i(TAG, "FotosUrls " + p.getUrls() + " Direccion: " + p.getDescription());
+                        Log.i(TAG, "Comuna " + p.getComuna() + " Lugar " + p.getLocalizacion());
 
                     }
 
@@ -88,7 +97,44 @@ public class View2Fragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<ArrayList<Foto>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<Cancha>> call, Throwable t) {
+                Log.e(TAG," onFailure: "+t.getMessage());
+            }
+        });
+    }
+
+    private void obtenerDatoscancha2() {
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        mRecyclerViewcancha2.setLayoutManager(layoutManager);
+        mRecyclerViewcancha2.setAdapter(mAdaptercancha);
+
+        CanchaApiService service = retrofitfoto.create(CanchaApiService.class);
+        Call<ArrayList<Cancha>> FotosRespuestaCall = service.obtenerListacancha();
+
+        FotosRespuestaCall.enqueue(new Callback<ArrayList<Cancha>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Cancha>> call, Response<ArrayList<Cancha>> response) {
+                if (response.isSuccessful()) {
+                    ArrayList listacancha2 = response.body();
+                    mAdaptercancha.setmDataSetcancha(listacancha2);
+
+
+                    for (int i = 0; i < listacancha2.size(); i++) {
+                        Cancha p = (Cancha) listacancha2.get(i);
+
+
+                        Log.i(TAG, "Comuna " + p.getComuna() + " Lugar " + p.getLocalizacion());
+
+                    }
+
+                } else {
+                    Log.e(TAG, "onResponse: " + response.errorBody());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Cancha>> call, Throwable t) {
                 Log.e(TAG," onFailure: "+t.getMessage());
             }
         });

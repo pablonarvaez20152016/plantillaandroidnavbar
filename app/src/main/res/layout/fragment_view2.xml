@@ -6,44 +6,23 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
-    <TextView
-        android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+        android:id="@+id/recycler_view_cancha"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buscador de Imagenes"
-        android:fontFamily="sans-serif-medium"
-        android:foregroundTint="#111113"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="18sp"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        app:msrv_ms_per_inch="100"
+        app:msrv_snap_count="2"/>
+    <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+        android:id="@+id/recycler_cancha2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Por favor Ingrese palabras clave"
-        android:fontFamily="sans-serif-medium"
-        android:foregroundTint="#111113"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="14sp"/>
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:fontFamily="sans-serif-medium"
-        android:foregroundTint="#111113"
-        android:textAlignment="center"
-        android:textSize="14sp"/>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_foto"
-        android:layout_width="386dp"
-        android:layout_height="548dp"
-        android:layout_alignParentBottom="true"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        app:msrv_ms_per_inch="50"
+        app:msrv_snap_count="4"/>
+
+
 </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

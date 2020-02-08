@@ -34,22 +34,30 @@
         android:id="@+id/nav_vista1"
         android:name="co.edu.udenar.treeapis.ui.View1Fragment"
         android:label="@string/SitiosCulturales"
-        tools:layout="@layout/fragment_view1" />
+        tools:layout="@layout/fragment_view1" >
+        <action
+            android:id="@+id/action_nav_vista1_to_nav_vista3"
+            app:destination="@id/nav_vista3" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_vista2"
         android:name="co.edu.udenar.treeapis.ui.View2Fragment"
-        android:label="@string/vista2"
+        android:label="@string/EscenariosDeportivos"
         tools:layout="@layout/fragment_view2" />
 
     <fragment
         android:id="@+id/nav_vista3"
         android:name="co.edu.udenar.treeapis.ui.View3Fragment"
         android:label="@string/Mapa"
-        tools:layout="@layout/fragment_view3" />
-    <fragment
-        android:id="@+id/acercaFragment"
-        android:name="co.edu.udenar.treeapis.AcercaFragment"
-        android:label="fragment_acerca"
-        tools:layout="@layout/fragment_acerca" />
+        tools:layout="@layout/fragment_view3" >
+        <argument
+            android:name="latitud"
+            app:argType="string"
+            android:defaultValue="1.230465" />
+        <argument
+            android:name="longitud"
+            app:argType="string"
+            android:defaultValue="-77.28791" />
+    </fragment>
 </navigation>

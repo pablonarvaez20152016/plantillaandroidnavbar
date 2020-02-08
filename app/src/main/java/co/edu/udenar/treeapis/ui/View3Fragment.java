@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -31,9 +32,18 @@ public class View3Fragment extends Fragment {
         myOpenMapView.setBuiltInZoomControls(true);
         MapController myMapController = (MapController) myOpenMapView.getController();
         myMapController.setCenter(madrid);
-        myMapController.setZoom(20);
+        myMapController.setZoom(15);
 
         myOpenMapView.setMultiTouchControls(true);
         return root;
     }
+
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//        if (getArguments() != null) {
+//            int drawableId = View3Fragment.fromBundle(getArguments().getString())
+//
+//        }
+//    }
 }

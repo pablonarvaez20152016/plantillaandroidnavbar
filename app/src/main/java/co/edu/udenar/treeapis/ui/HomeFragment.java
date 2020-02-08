@@ -19,7 +19,7 @@ import static androidx.navigation.Navigation.findNavController;
 public class HomeFragment extends Fragment {
 
 //    private HomeViewModel mViewModel;
-    private Button btnwifi,btnculturales,btnmapa;
+    private Button btnwifi,btnculturales,btnmapa,btncancha;
 
 
     public static HomeFragment newInstance() {
@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment {
         btnwifi=vistahome.findViewById(R.id.btnwifi);
         btnculturales=vistahome.findViewById(R.id.btnculturales);
         btnmapa=vistahome.findViewById(R.id.btnmapa);
+        btncancha=vistahome.findViewById(R.id.btncancha);
 
 
         btnwifi.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,12 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 findNavController(v).navigate(R.id.action_nav_home_to_nav_vista3);
+            }
+        });
+        btncancha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findNavController(v).navigate(R.id.action_nav_home_to_nav_vista2);
             }
         });
 
